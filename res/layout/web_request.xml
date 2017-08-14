@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:background="#fafcfa"
+              android:layout_height="match_parent">
+
+    <include layout="@layout/head" />
+
+    <Button
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/btn_send"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Send Request" />
+
+    <ScrollView
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="22dp"
+            android:layout_marginRight="22dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+        <TextView
+                android:id="@+id/TextView_Response"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hello android !" />
+    </ScrollView>
+
+
+
+</LinearLayout>

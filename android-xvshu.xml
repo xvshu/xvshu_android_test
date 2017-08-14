@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="android-xvshu" default="all">
+  
+  
+  <property file="android-xvshu.properties"/>
+  <!-- Uncomment the following property if no tests compilation is needed -->
+  <!-- 
+  <property name="skip.tests" value="true"/>
+   -->
+  
+  <!-- Compiler options -->
+  
+  <property name="compiler.debug" value="on"/>
+  <property name="compiler.generate.no.warnings" value="off"/>
+  <property name="compiler.args" value=""/>
+  <property name="compiler.max.memory" value="700m"/>
+  <patternset id="ignored.files">
+    <exclude name="**/*.hprof/**"/>
+    <exclude name="**/*.pyc/**"/>
+    <exclude name="**/*.pyo/**"/>
+    <exclude name="**/*.rbc/**"/>
+    <exclude name="**/*.yarb/**"/>
+    <exclude name="**/*~/**"/>
+    <exclude name="**/.DS_Store/**"/>
+    <exclude name="**/.git/**"/>
+    <exclude name="**/.hg/**"/>
+    <exclude name="**/.svn/**"/>
+    <exclude name="**/CVS/**"/>
+    <exclude name="**/__pycache__/**"/>
+    <exclude name="**/_svn/**"/>
+    <exclude name="**/vssver.scc/**"/>
+    <exclude name="**/vssver2.scc/**"/>
+  </patternset>
+  <patternset id="library.patterns">
+    <include name="*.egg"/>
+    <include name="*.jar"/>
+    <include name="*.ear"/>
+    <include name="*.swc"/>
+    <include name="*.war"/>
+    <include name="*.ane"/>
+    <include name="*.zip"/>
+  </patternset>
+  <patternset id="compiler.resources">
+    <exclude name="**/?*.java"/>
+    <exclude name="**/?*.form"/>
+    <exclude name="**/?*.class"/>
+    <exclude name="**/?*.groovy"/>
+    <exclude name="**/?*.scala"/>
+    <exclude name="**/?*.flex"/>
+    <exclude name="**/?*.kt"/>
+    <exclude name="**/?*.clj"/>
+    <exclude name="**/?*.aj"/>
+  </patternset>
+  
+  <!-- JDK definitions -->
+  
+  <property name="jdk.bin.maven_android_api_15_platform" value="${jdk.home.maven_android_api_15_platform}/../../java/jdk1.8.0_91/bin"/>
+  <path id="jdk.classpath.maven_android_api_15_platform">
+    <fileset dir="${jdk.home.maven_android_api_15_platform}">
+      <include name="platforms/android-15/data/res"/>
+      <include name="tools/support/annotations.jar"/>
+      <include name="../../java/jdk1.8.0_91/jre/lib/charsets.jar"/>
+      <include name="../../java/jdk1.8.0_91/jre/lib/deploy.jar"/>
+      <include name="../../java/jdk1.8.0_91/jre/lib/ext/access-bridge-64.jar"/>
+      <include name="../../java/jdk1.8.0_91/jre/lib/ext/cldrdata.jar"/>
+      <include name="../../java/jdk1.8.0_91/jre/lib/ext/dnsns.jar"/>
+      <include name="../../java/jdk1.8.0_91/jre/lib/ext/jaccess.jar"/>
+      <include name="../../java/jdk1.8.0_91/jre/lib/ext/jfxrt.jar"/>
+      <include name="../../java/jdk1.8.0_91/jre/lib/ext/localedata.jar"/>
+      <include name="../../java/jdk1.8.0_91/jre/lib/ext/nashorn.jar"/>
+      <include name="../../java/jdk1.8.0_91/jre/lib/ext/sunec.jar"/>
+      <include name="../../java/jdk1.8.0_91/jre/lib/ext/sunjce_provider.jar"/>
+      <include name="../../java/jdk1.8.0_91/jre/lib/ext/sunmscapi.jar"/>
+      <include name="../../java/jdk1.8.0_91/jre/lib/ext/sunpkcs11.jar"/>
+      <include name="../../java/jdk1.8.0_91/jre/lib/ext/zipfs.jar"/>
+      <include name="../../java/jdk1.8.0_91/jre/lib/javaws.jar"/>
+      <include name="../../java/jdk1.8.0_91/jre/lib/jce.jar"/>
+      <include name="../../java/jdk1.8.0_91/jre/lib/jfr.jar"/>
+      <include name="../../java/jdk1.8.0_91/jre/lib/jfxswt.jar"/>
+      <include name="../../java/jdk1.8.0_91/jre/lib/jsse.jar"/>
+      <include name="../../java/jdk1.8.0_91/jre/lib/management-agent.jar"/>
+      <include name="../../java/jdk1.8.0_91/jre/lib/plugin.jar"/>
+      <include name="../../java/jdk1.8.0_91/jre/lib/resources.jar"/>
+      <include name="../../java/jdk1.8.0_91/jre/lib/rt.jar"/>
+    </fileset>
+  </path>
+  
+  <property name="project.jdk.home" value="${jdk.home.1.8}"/>
+  <property name="project.jdk.bin" value="${jdk.bin.1.8}"/>
+  <property name="project.jdk.classpath" value="jdk.classpath.1.8"/>
+  
+  
+  <!-- Project Libraries -->
+  
+  <path id="library.maven:_com.google.android:android:2.1.2.classpath">
+    <pathelement location="${path.variable.maven_repository}/com/google/android/android/2.1.2/android-2.1.2.jar"/>
+  </path>
+  
+  <path id="library.maven:_commons-codec:commons-codec:1.3.classpath">
+    <pathelement location="${path.variable.maven_repository}/commons-codec/commons-codec/1.3/commons-codec-1.3.jar"/>
+  </path>
+  
+  <path id="library.maven:_commons-logging:commons-logging:1.1.1.classpath">
+    <pathelement location="${path.variable.maven_repository}/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.apache.httpcomponents:httpclient:4.0.1.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/apache/httpcomponents/httpclient/4.0.1/httpclient-4.0.1.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.apache.httpcomponents:httpcore:4.0.1.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/apache/httpcomponents/httpcore/4.0.1/httpcore-4.0.1.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.json:json:20080701.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/json/json/20080701/json-20080701.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.khronos:opengl-api:gl1.1-android-2.1_r1.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/khronos/opengl-api/gl1.1-android-2.1_r1/opengl-api-gl1.1-android-2.1_r1.jar"/>
+  </path>
+  
+  <path id="library.maven:_xerces:xmlparserapis:2.6.2.classpath">
+    <pathelement location="${path.variable.maven_repository}/xerces/xmlParserAPIs/2.6.2/xmlParserAPIs-2.6.2.jar"/>
+  </path>
+  
+  <path id="library.maven:_xpp3:xpp3:1.1.4c.classpath">
+    <pathelement location="${path.variable.maven_repository}/xpp3/xpp3/1.1.4c/xpp3-1.1.4c.jar"/>
+  </path>
+  
+  
+  <!-- Global Libraries -->
+  
+  
+  <!-- Application Server Libraries -->
+  <!-- Register Custom Compiler Taskdefs -->
+  <property name="javac2.home" value="${idea.home}/lib"/>
+  <path id="javac2.classpath">
+    <pathelement location="${javac2.home}/javac2.jar"/>
+    <pathelement location="${javac2.home}/jdom.jar"/>
+    <pathelement location="${javac2.home}/asm-all.jar"/>
+    <pathelement location="${javac2.home}/jgoodies-forms.jar"/>
+  </path>
+  <target name="register.custom.compilers">
+    <taskdef name="javac2" classname="com.intellij.ant.Javac2" classpathref="javac2.classpath"/>
+    <taskdef name="instrumentIdeaExtensions" classname="com.intellij.ant.InstrumentIdeaExtensions" classpathref="javac2.classpath"/>
+  </target>
+  
+  <!-- Modules -->
+  
+  <import file="${basedir}/module_android-xvshu.xml"/>
+  
+  <target name="init" description="Build initialization">
+    <!-- Perform any build initialization in this target -->
+  </target>
+  
+  <target name="clean" depends="clean.module.android-xvshu" description="cleanup all"/>
+  
+  <target name="build.modules" depends="init, clean, compile.module.android-xvshu" description="build all modules"/>
+  
+  <target name="all" depends="build.modules" description="build all"/>
+</project>

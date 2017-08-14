@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+
+    <TextView
+            android:id="@+id/text_title"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:ellipsize="marquee"
+            android:gravity="center_horizontal|center"
+            android:background="@color/background_head"
+            android:text="XS-APP"
+            android:textColor="#ffffffff"
+            android:textSize="20dp" />
+
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="80dp"
+            android:text="http://blog.csdn.net/column/details/16776.html"
+            android:id="@+id/hellotextView" android:textColor="#2a25b9" android:gravity="center"/>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:orientation="horizontal"
+                  android:layout_width="match_parent"
+                  android:layout_marginBottom="2dp"
+                  android:layout_height="wrap_content">
+
+
+        <Button
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:text="say hello"
+                android:id="@+id/hellobutton"
+                android:background="#3aadfd"
+                android:layout_marginRight="2dp"
+                android:layout_marginLeft="2dp"
+        />
+        <Button
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:id="@+id/button2"
+                android:layout_weight="1"
+                android:text="启动服务"
+                android:onClick="startService"
+                android:background="#3aadfd"
+                android:layout_marginRight="2dp"
+                android:layout_marginLeft="2dp"
+
+        />
+
+        <Button
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:text="停止服务"
+                android:id="@+id/button"
+                android:layout_weight="1"
+                android:onClick="stopService"
+                android:background="#3aadfd"
+                android:layout_marginRight="2dp"
+                android:layout_marginLeft="2dp"
+        />
+
+        <Button
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:text="ListView"
+                android:layout_weight="1"
+                android:id="@+id/startlistview"
+                android:onClick="showListView"
+                android:background="#3aadfd"
+                android:layout_marginRight="2dp"
+                android:layout_marginLeft="2dp"
+
+        />
+
+    </LinearLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:orientation="horizontal"
+                  android:layout_width="match_parent"
+                  android:layout_marginBottom="2dp"
+                  android:layout_height="wrap_content">
+        <Button
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:text="返回"
+                android:layout_weight="1"
+                android:id="@+id/stoptlistview"
+                android:onClick="backtologin"
+                android:background="#3aadfd"
+                android:layout_marginRight="2dp"
+                android:layout_marginLeft="2dp"
+
+        />
+        <Button
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:text="计算器"
+                android:id="@+id/showCalc"
+                android:onClick="showCalc"
+                android:layout_weight="1"
+                android:background="#3aadfd"
+                android:layout_marginRight="2dp"
+                android:layout_marginLeft="2dp"
+
+        />
+        <Button
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:text="baidu"
+                android:id="@+id/showwebmain"
+                android:onClick="showWebMain"
+                android:layout_weight="1"
+                android:background="#3aadfd"
+                android:layout_marginRight="2dp"
+                android:layout_marginLeft="2dp"
+
+        />
+        <Button
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:text="web交互"
+                android:id="@+id/showwebrequest"
+                android:onClick="showWebRequest"
+                android:layout_weight="1"
+                android:background="#3aadfd"
+                android:layout_marginRight="2dp"
+                android:layout_marginLeft="2dp"
+
+        />
+
+    </LinearLayout>
+
+</LinearLayout>

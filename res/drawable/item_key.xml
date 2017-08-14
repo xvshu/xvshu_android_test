@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 设置摁下去 这个状态下的图片-->
+    <item android:drawable="@color/key_down" android:state_pressed="true" />
+    <!-- 设置默认状态 -->
+    <item android:drawable="@color/key_up" />
+</selector>

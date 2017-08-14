@@ -1,0 +1,50 @@
+<resources>
+
+
+    <style name="fade" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/in_from_right</item>
+        <item name="android:activityOpenExitAnimation">@anim/out_to_left</item>
+        <item name="android:activityCloseEnterAnimation">@anim/in_from_left</item>
+        <item name="android:activityCloseExitAnimation">@anim/out_to_right</item>
+    </style>
+
+
+
+    <style name="keyStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@drawable/item_key</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:onClick">keyClick</item>
+    </style>
+
+    <style name="rbStyle">
+        <item name="android:width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/text_out_color</item>
+        <item name="android:background">@color/background_transparent</item>
+    </style>
+
+    <style name="more_item">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">@dimen/view_space_10</item>
+        <item name="android:textSize">@dimen/font_size_20</item>
+        <!-- <item name="android:textColor">@color/text_dark_red</item>-->
+        <item name="android:background">@drawable/item_state</item>
+    </style>
+
+    <style name="text_in_out">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center_vertical|end</item>
+        <item name="android:padding">@dimen/view_space_10</item>
+    </style>
+
+</resources>

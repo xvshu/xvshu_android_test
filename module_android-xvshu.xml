@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_android-xvshu" default="compile.module.android-xvshu">
+  <dirname property="module.android-xvshu.basedir" file="${ant.file.module_android-xvshu}"/>
+  
+  <property name="module.jdk.home.android-xvshu" value="${jdk.home.maven_android_api_15_platform}"/>
+  <property name="module.jdk.bin.android-xvshu" value="${jdk.bin.maven_android_api_15_platform}"/>
+  <property name="module.jdk.classpath.android-xvshu" value="jdk.classpath.maven_android_api_15_platform"/>
+  
+  <property name="compiler.args.android-xvshu" value="-encoding UTF-8 -source 1.6 -target 1.6 ${compiler.args}"/>
+  
+  <property name="android-xvshu.output.dir" value="${module.android-xvshu.basedir}/target/classes"/>
+  <property name="android-xvshu.testoutput.dir" value="${module.android-xvshu.basedir}/target/test-classes"/>
+  
+  <path id="android-xvshu.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="android-xvshu.module.production.classpath">
+    <path refid="${module.jdk.classpath.android-xvshu}"/>
+    <path refid="library.maven:_com.google.android:android:2.1.2.classpath"/>
+    <path refid="library.maven:_commons-logging:commons-logging:1.1.1.classpath"/>
+    <path refid="library.maven:_org.apache.httpcomponents:httpclient:4.0.1.classpath"/>
+    <path refid="library.maven:_org.apache.httpcomponents:httpcore:4.0.1.classpath"/>
+    <path refid="library.maven:_commons-codec:commons-codec:1.3.classpath"/>
+    <path refid="library.maven:_org.khronos:opengl-api:gl1.1-android-2.1_r1.classpath"/>
+    <path refid="library.maven:_xerces:xmlparserapis:2.6.2.classpath"/>
+    <path refid="library.maven:_xpp3:xpp3:1.1.4c.classpath"/>
+    <path refid="library.maven:_org.json:json:20080701.classpath"/>
+  </path>
+  
+  <path id="android-xvshu.runtime.production.module.classpath">
+    <pathelement location="${android-xvshu.output.dir}"/>
+  </path>
+  
+  <path id="android-xvshu.module.classpath">
+    <path refid="${module.jdk.classpath.android-xvshu}"/>
+    <pathelement location="${android-xvshu.output.dir}"/>
+    <path refid="library.maven:_com.google.android:android:2.1.2.classpath"/>
+    <path refid="library.maven:_commons-logging:commons-logging:1.1.1.classpath"/>
+    <path refid="library.maven:_org.apache.httpcomponents:httpclient:4.0.1.classpath"/>
+    <path refid="library.maven:_org.apache.httpcomponents:httpcore:4.0.1.classpath"/>
+    <path refid="library.maven:_commons-codec:commons-codec:1.3.classpath"/>
+    <path refid="library.maven:_org.khronos:opengl-api:gl1.1-android-2.1_r1.classpath"/>
+    <path refid="library.maven:_xerces:xmlparserapis:2.6.2.classpath"/>
+    <path refid="library.maven:_xpp3:xpp3:1.1.4c.classpath"/>
+    <path refid="library.maven:_org.json:json:20080701.classpath"/>
+  </path>
+  
+  <path id="android-xvshu.runtime.module.classpath">
+    <pathelement location="${android-xvshu.testoutput.dir}"/>
+    <pathelement location="${android-xvshu.output.dir}"/>
+    <path refid="library.maven:_com.google.android:android:2.1.2.classpath"/>
+    <path refid="library.maven:_commons-logging:commons-logging:1.1.1.classpath"/>
+    <path refid="library.maven:_org.apache.httpcomponents:httpclient:4.0.1.classpath"/>
+    <path refid="library.maven:_org.apache.httpcomponents:httpcore:4.0.1.classpath"/>
+    <path refid="library.maven:_commons-codec:commons-codec:1.3.classpath"/>
+    <path refid="library.maven:_org.khronos:opengl-api:gl1.1-android-2.1_r1.classpath"/>
+    <path refid="library.maven:_xerces:xmlparserapis:2.6.2.classpath"/>
+    <path refid="library.maven:_xpp3:xpp3:1.1.4c.classpath"/>
+    <path refid="library.maven:_org.json:json:20080701.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.android-xvshu">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.android-xvshu">
+    <patternset refid="excluded.from.module.android-xvshu"/>
+  </patternset>
+  
+  <path id="android-xvshu.module.sourcepath">
+    <dirset dir="${module.android-xvshu.basedir}">
+      <include name="src/main/java"/>
+      <include name="target/generated-sources/r"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.android-xvshu" depends="compile.module.android-xvshu.production,compile.module.android-xvshu.tests" description="Compile module android-xvshu"/>
+  
+  <target name="compile.module.android-xvshu.production" depends="register.custom.compilers" description="Compile module android-xvshu; production classes">
+    <mkdir dir="${android-xvshu.output.dir}"/>
+    <javac2 destdir="${android-xvshu.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.android-xvshu}/javac">
+      <compilerarg line="${compiler.args.android-xvshu}"/>
+      <bootclasspath refid="android-xvshu.module.bootclasspath"/>
+      <classpath refid="android-xvshu.module.production.classpath"/>
+      <src refid="android-xvshu.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.android-xvshu"/>
+    </javac2>
+    
+    <copy todir="${android-xvshu.output.dir}">
+      <fileset dir="${module.android-xvshu.basedir}/src/main/java">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.android-xvshu.basedir}/target/generated-sources/r">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.android-xvshu.tests" depends="register.custom.compilers,compile.module.android-xvshu.production" description="compile module android-xvshu; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.android-xvshu" description="cleanup module">
+    <delete dir="${android-xvshu.output.dir}"/>
+    <delete dir="${android-xvshu.testoutput.dir}"/>
+  </target>
+</project>
