@@ -71,6 +71,13 @@ public class HelloActivity extends Activity {
         startActivity(intent_calc);
     }
 
+    public void showretrofitview(View view) {
+        Intent intent_calc = new Intent(this, RetrofitActivity.class);
+        startActivity(intent_calc);
+    }
+
+
+
 
 
 

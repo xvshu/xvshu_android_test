@@ -69,8 +69,8 @@ public final class R {
         public static final int LL_ListViewDiarys=0x7f09001d;
         public static final int LV_Calc=0x7f090014;
         public static final int LV_Diarys=0x7f09001e;
-        public static final int TextView_Response=0x7f090033;
-        public static final int btn_send=0x7f090032;
+        public static final int TextView_Response=0x7f090034;
+        public static final int btn_send=0x7f090033;
         public static final int button=0x7f09002b;
         public static final int button2=0x7f09002a;
         public static final int button_backward=0x7f090017;
@@ -111,13 +111,14 @@ public final class R {
         public static final int print_show=0x7f090000;
         public static final int promptText=0x7f090027;
         public static final int showCalc=0x7f09002e;
+        public static final int showretrofitview=0x7f090031;
         public static final int showwebmain=0x7f09002f;
         public static final int showwebrequest=0x7f090030;
         public static final int startlistview=0x7f09002c;
         public static final int stoptlistview=0x7f09002d;
         public static final int text_title=0x7f090018;
         public static final int userId=0x7f090021;
-        public static final int webMainView=0x7f090031;
+        public static final int webMainView=0x7f090032;
     }
     public static final class layout {
         public static final int calc=0x7f030000;
@@ -128,8 +129,9 @@ public final class R {
         public static final int listview_diarys=0x7f030005;
         public static final int login=0x7f030006;
         public static final int main=0x7f030007;
-        public static final int web_main=0x7f030008;
-        public static final int web_request=0x7f030009;
+        public static final int retrofit_login=0x7f030008;
+        public static final int web_main=0x7f030009;
+        public static final int web_request=0x7f03000a;
     }
     public static final class string {
         public static final int action_sign_in=0x7f070003;

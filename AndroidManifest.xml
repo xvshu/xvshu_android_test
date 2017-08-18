@@ -46,6 +46,11 @@
             android:label="@string/app_name" >
     </activity>
 
+    <activity
+            android:name=".RetrofitActivity"
+            android:label="@string/app_name" >
+    </activity>
+
     <service android:name=".service.HelloService" />
 
   </application>
