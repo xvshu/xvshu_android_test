@@ -13,6 +13,8 @@ public final class R {
         public static final int in_from_right=0x7f040001;
         public static final int out_to_left=0x7f040002;
         public static final int out_to_right=0x7f040003;
+        public static final int popup_enter=0x7f040004;
+        public static final int popup_exit=0x7f040005;
     }
     public static final class attr {
     }
@@ -59,18 +61,21 @@ public final class R {
     }
     public static final class drawable {
         public static final int ic_android=0x7f020000;
-        public static final int ic_launcher=0x7f020001;
-        public static final int icon=0x7f020002;
-        public static final int item_key=0x7f020003;
-        public static final int item_state=0x7f020004;
-        public static final int login_input_arrow=0x7f020005;
+        public static final int ic_delete=0x7f020001;
+        public static final int ic_launcher=0x7f020002;
+        public static final int ic_setting=0x7f020003;
+        public static final int ic_up=0x7f020004;
+        public static final int icon=0x7f020005;
+        public static final int item_key=0x7f020006;
+        public static final int item_state=0x7f020007;
+        public static final int login_input_arrow=0x7f020008;
     }
     public static final class id {
         public static final int LL_ListViewDiarys=0x7f09001d;
         public static final int LV_Calc=0x7f090014;
         public static final int LV_Diarys=0x7f09001e;
-        public static final int TextView_Response=0x7f090034;
-        public static final int btn_send=0x7f090033;
+        public static final int TextView_Response=0x7f090037;
+        public static final int btn_send=0x7f090036;
         public static final int button=0x7f09002b;
         public static final int button2=0x7f09002a;
         public static final int button_backward=0x7f090017;
@@ -85,6 +90,7 @@ public final class R {
         public static final int itemText=0x7f09001c;
         public static final int itemTitle=0x7f09001b;
         public static final int item_calc=0x7f090015;
+        public static final int iv_menu_item=0x7f090033;
         public static final int key_0=0x7f090011;
         public static final int key_1=0x7f09000c;
         public static final int key_2=0x7f09000d;
@@ -107,6 +113,7 @@ public final class R {
         public static final int layout_titlebar=0x7f090016;
         public static final int loginBtn=0x7f090026;
         public static final int loginbutton=0x7f09001f;
+        public static final int lv_toptitle_menu=0x7f090032;
         public static final int pass=0x7f090023;
         public static final int print_show=0x7f090000;
         public static final int promptText=0x7f090027;
@@ -117,8 +124,9 @@ public final class R {
         public static final int startlistview=0x7f09002c;
         public static final int stoptlistview=0x7f09002d;
         public static final int text_title=0x7f090018;
+        public static final int tv_menu_item=0x7f090034;
         public static final int userId=0x7f090021;
-        public static final int webMainView=0x7f090032;
+        public static final int webMainView=0x7f090035;
     }
     public static final class layout {
         public static final int calc=0x7f030000;
@@ -129,9 +137,11 @@ public final class R {
         public static final int listview_diarys=0x7f030005;
         public static final int login=0x7f030006;
         public static final int main=0x7f030007;
-        public static final int retrofit_login=0x7f030008;
-        public static final int web_main=0x7f030009;
-        public static final int web_request=0x7f03000a;
+        public static final int menu_popwindow=0x7f030008;
+        public static final int menu_popwindow_item=0x7f030009;
+        public static final int retrofit_login=0x7f03000a;
+        public static final int web_main=0x7f03000b;
+        public static final int web_request=0x7f03000c;
     }
     public static final class string {
         public static final int action_sign_in=0x7f070003;
@@ -155,6 +165,7 @@ public final class R {
         public static final int userIdError=0x7f07000d;
     }
     public static final class style {
+        public static final int PopupAnimation=0x7f080005;
         public static final int fade=0x7f080000;
         public static final int keyStyle=0x7f080001;
         public static final int more_item=0x7f080003;

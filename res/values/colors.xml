@@ -17,6 +17,7 @@
     <color name="view_background_light">#FAC258</color>
     <color name="view_background_dark">#FFAC59</color>
     <color name="white">#ffffffff</color>
+    <color name="black">#000000</color>
     <color name="background_ground">#D9D9D9</color>
     <color name="background_head">#ed4255</color>
 

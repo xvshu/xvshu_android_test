@@ -46,8 +46,9 @@
             android:paddingLeft="5dp"
             android:singleLine="true"
             android:text="···"
+            android:onClick="more"
             android:textColor="#ffffffff"
             android:textSize="30dp"
-            android:visibility="invisible" />
+            android:visibility="visible" />
 
 </RelativeLayout>

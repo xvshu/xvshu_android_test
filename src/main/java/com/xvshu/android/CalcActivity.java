@@ -4,14 +4,17 @@ import android.app.Activity;
 import android.content.ContentValues;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
-import android.widget.Toast;
+import android.widget.*;
 import com.xvshu.android.db.CalcHisrory;
 import com.xvshu.android.db.SqliteManage;
+import com.xvshu.android.model.MenuPopwindowBean;
 import com.xvshu.android.service.HelloService;
+import com.xvshu.android.window.MenuPopwindow;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Stack;
 
 
@@ -209,6 +212,31 @@ public class CalcActivity extends Activity {
     }
     public void back(View view){
         this.finish();
+    }
+
+    public void  more(View view){
+        int[] icons = {R.drawable.ic_setting, R.drawable.ic_delete};
+        String[] texts = {"编辑", "删除"};
+        List<MenuPopwindowBean> list = new ArrayList<MenuPopwindowBean>();
+        MenuPopwindowBean bean = null;
+        for (int i = 0; i < icons.length; i++) {
+            bean = new MenuPopwindowBean();
+            bean.setIcon(icons[i]);
+            bean.setText(texts[i]);
+            list.add(bean);
+        }
+        MenuPopwindow pw = new MenuPopwindow(this, list);
+        pw.setOnItemClick(new AdapterView.OnItemClickListener(){
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view,
+                                    int position, long id) {
+                Adapter adapter=parent.getAdapter();
+                MenuPopwindowBean thisBean = (MenuPopwindowBean)adapter.getItem(position);
+                Log.i("more", "onItemClick: "+thisBean.getText());
+            }
+
+        });
+        pw.showPopupWindow(findViewById(R.id.button_forward));
     }
 
 }
